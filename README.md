@@ -226,8 +226,12 @@ Build instructions
 ### Docker build
 copy the dockerfile under some folder and run docker build -t image_name .
 * inside the doker container run:
-        mkdir build && cd build && cmake ..
-        make help to see compile options and use make bin_test to compile tutorial.cpp
+
+
+    - mkdir build && cd build && cmake ..
+ 
+
+    - make help to see compile options and use make bin_test to compile tutorial.cpp
 
 
 ### Dependencies
