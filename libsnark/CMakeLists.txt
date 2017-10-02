@@ -424,8 +424,27 @@ add_executable(
   gadgetlib2/examples/simple_example.cpp
   gadgetlib2/examples/simple_example.hpp
 )
+
+
 target_link_libraries(
   gadgetlib2_integration_test
+
+  snark
+  gtest_main
+)
+
+add_executable(
+  bin_test
+  EXCLUDE_FROM_ALL
+
+  gadgetlib2/examples/tutorial.cpp
+  gadgetlib2/examples/simple_example.cpp
+  gadgetlib2/examples/simple_example.hpp
+  relations/constraint_satisfaction_problems/r1cs/examples/r1cs_examples.hpp
+  relations/constraint_satisfaction_problems/r1cs/examples/r1cs_examples.tcc
+)
+target_link_libraries(
+  bin_test
 
   snark
   gtest_main
